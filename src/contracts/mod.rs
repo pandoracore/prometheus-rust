@@ -15,8 +15,14 @@
 
 pub mod prometheus;
 pub mod computation;
+pub mod arbitration_offer;
+pub mod arbitration;
 
 #[allow(unused_imports)]
 pub use crate::prometheus::*;
 #[allow(unused_imports)]
 pub use crate::computation::*;
+#[allow(unused_imports)]
+pub use crate::arbitration_offer::*;
+#[allow(unused_imports)]
+pub use crate::arbitration::*;

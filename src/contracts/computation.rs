@@ -39,9 +39,17 @@ impl Offchain for ComputationFormation {
 /// \rangle$. Computational contract locks deposits and includes all possible schemes
 /// for payouts (see Table 2 in the original Prometheus specification).
 pub struct Computation {
+    /// Prometheus contract defining the values of the main parameters for the computation contract
     pub prometheus_contract: Arc<contracts::Prometheus>,
+
+    /// ID of the commitment transaction this contract is bound to
     pub commitment_txid: TxID,
-    pub arbitration_txid: TxID,
+
+    /// Pre-agreed and on-chain committed arbitration contract used by this computation contract
+    pub arbitration_contract: Box<contracts::Arbitration>,
+
+    /// Set of the partically-signed settlement transaction for each of the possible settlement
+    /// cases
     pub settlement_txs: [PartiallySignedTransaction; 8],
 }
 
