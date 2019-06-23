@@ -13,10 +13,10 @@
 // along with this software.
 // If not, see <https://opensource.org/licenses/MIT>.
 
-pub mod contracts;
-pub mod utils;
+pub mod prometheus;
+pub mod computational;
 
 #[allow(unused_imports)]
-use crate::contracts::*;
+use crate::prometheus::*;
 #[allow(unused_imports)]
-use crate::utils::*;
+use crate::computational::*;
