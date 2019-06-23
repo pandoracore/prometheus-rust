@@ -11,3 +11,7 @@
 // along with this software.
 // If not, see <https://opensource.org/licenses/MIT>.
 
+pub mod contract;
+
+#[allow(unused_imports)]
+use crate::contract::*;
