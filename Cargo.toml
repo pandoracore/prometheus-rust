@@ -1,0 +1,23 @@
+[package]
+name = "prometheus"
+version = "0.1.0"
+license = "MIT"
+authors = ["Dr Maxim Orlovsky <dr.orlovsky@gmail.com>"]
+description = "Prometheus protocol library: scalability layer for generic computing & machine learning on top of Bitcoin"
+keywords = [ "crypto", "bitcoin", "smart-contracts", "distributed-computing", "machine-learning", "ai" ]
+readme = "README.md"
+edition = "2018"
+
+[lib]
+name = "prometheus"
+path = "src/lib.rs"
+
+[dependencies]
+bitcoin = "~0.18.0"
+bech32 = "~0.6.0"
+bitcoin-bech32 = "~0.9.0"
+bitcoin_hashes = "~0.3.0"
+
+[dependencies.secp256k1]
+version = "~0.12.0" # We require this version because of compatibility issues with bitcoin 0.18.0
+features = [ "rand" ]
