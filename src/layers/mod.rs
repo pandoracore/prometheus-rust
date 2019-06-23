@@ -13,16 +13,13 @@
 // along with this software.
 // If not, see <https://opensource.org/licenses/MIT>.
 
-pub mod traits;
-pub mod utils;
-pub mod layers;
-pub mod contracts;
+pub mod global_state;
+pub mod state_channel;
+pub mod internal_state;
 
 #[allow(unused_imports)]
-use crate::contracts::*;
+use crate::global_state::*;
 #[allow(unused_imports)]
-use crate::layers::*;
+use crate::state_channel::*;
 #[allow(unused_imports)]
-use crate::utils::*;
-#[allow(unused_imports)]
-use crate::traits::*;
+use crate::internal_state::*;

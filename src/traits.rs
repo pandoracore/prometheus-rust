@@ -13,16 +13,26 @@
 // along with this software.
 // If not, see <https://opensource.org/licenses/MIT>.
 
-pub mod traits;
-pub mod utils;
-pub mod layers;
-pub mod contracts;
+/// Routines used for the on-chain commitments for the global consensus state-related data
+/// $\Gamma^\Omega$
+pub trait Onchain {
 
-#[allow(unused_imports)]
-use crate::contracts::*;
-#[allow(unused_imports)]
-use crate::layers::*;
-#[allow(unused_imports)]
-use crate::utils::*;
-#[allow(unused_imports)]
-use crate::traits::*;
+}
+
+
+/// Routines used to encode and operate both global consensus state off-chain data $\Gamma^\Theta$
+/// and multiparty state channel-related data $\mathsf{M}(\mathsf{C}_i) \mid \Lambda$
+/// which are not stored on-chain and are exchanged in peer-to-peer mannel + stored locally
+pub trait Offchain {
+
+}
+
+/// Data present in the global scope $\Gamma$
+pub trait GlobalScope {
+
+}
+
+/// Data present in the state channel scope $\Lambda$
+pub trait ChannelScope {
+
+}

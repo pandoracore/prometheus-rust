@@ -13,16 +13,19 @@
 // along with this software.
 // If not, see <https://opensource.org/licenses/MIT>.
 
-pub mod traits;
-pub mod utils;
-pub mod layers;
-pub mod contracts;
+use crate::*;
 
-#[allow(unused_imports)]
-use crate::contracts::*;
-#[allow(unused_imports)]
-use crate::layers::*;
-#[allow(unused_imports)]
-use crate::utils::*;
-#[allow(unused_imports)]
-use crate::traits::*;
+/// Global consensus state $\mathsf{G} \mid \Gamma$, which combines both blockchain-stored state
+/// $\Gamma^\Omega$ and off-chain data $\Gamma^\Theta$, committed to the blockchain with hashes
+/// and replicated by all parties participating the protocol
+pub struct GlobalState {
+
+}
+
+impl GlobalScope for GlobalState {
+
+}
+
+impl Onchain for GlobalState {
+
+}

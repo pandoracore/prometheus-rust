@@ -12,17 +12,3 @@
 // You should have received a copy of the MIT License
 // along with this software.
 // If not, see <https://opensource.org/licenses/MIT>.
-
-pub mod traits;
-pub mod utils;
-pub mod layers;
-pub mod contracts;
-
-#[allow(unused_imports)]
-use crate::contracts::*;
-#[allow(unused_imports)]
-use crate::layers::*;
-#[allow(unused_imports)]
-use crate::utils::*;
-#[allow(unused_imports)]
-use crate::traits::*;

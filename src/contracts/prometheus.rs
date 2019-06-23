@@ -13,7 +13,6 @@
 // along with this software.
 // If not, see <https://opensource.org/licenses/MIT>.
 
-use bitcoin::Transaction;
 use secp256k1::PublicKey;
 
 use crate::*;
@@ -26,6 +25,8 @@ use crate::*;
 /// t_1, t_2, t_3, t_4 \rangle$ (see struct member definitions below and Table 1 of the Prometheus
 /// specification for the meaning of the constants).
 pub struct Prometheus {
+    // I. Off-chain contract part
+
     /// Stake required to be deposited by Worker, $w$
     pub worker_stake: Satoshi,
 

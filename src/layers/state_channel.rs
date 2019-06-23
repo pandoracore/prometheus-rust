@@ -13,16 +13,15 @@
 // along with this software.
 // If not, see <https://opensource.org/licenses/MIT>.
 
-pub mod traits;
-pub mod utils;
-pub mod layers;
-pub mod contracts;
+use crate::*;
 
-#[allow(unused_imports)]
-use crate::contracts::*;
-#[allow(unused_imports)]
-use crate::layers::*;
-#[allow(unused_imports)]
-use crate::utils::*;
-#[allow(unused_imports)]
-use crate::traits::*;
+/// Multiparty state channel $\mathsf{M}(\mathsf{C}_i) \mid \Lambda$ originating from each
+/// computational contract $\mathsf{C_i}$: $\mathsf{M}(\mathsf{C}_i) = \langle \mathsf{C_i},
+/// \Upsilon, \pi, \mathtt{Encrypt}(\Pi, h_p)\rangle$
+pub struct StateChannel {
+
+}
+
+impl ChannelScope for StateChannel {
+
+}
