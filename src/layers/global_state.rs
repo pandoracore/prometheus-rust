@@ -17,9 +17,10 @@ use crate::*;
 
 /// Global consensus state $\mathsf{G} \mid \Gamma$, which combines both blockchain-stored state
 /// $\Gamma^\Omega$ and off-chain data $\Gamma^\Theta$, committed to the blockchain with hashes
-/// and replicated by all parties participating the protocol
+/// and replicated by all parties participating the protocol.
 pub struct GlobalState {
-
+    pub prometheus_contracts: Vec<contracts::Prometheus>,
+    pub computational_contracts: Vec<contracts::Computation>,
 }
 
 impl GlobalScope for GlobalState {

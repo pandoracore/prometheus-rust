@@ -18,8 +18,8 @@ pub mod state_channel;
 pub mod internal_state;
 
 #[allow(unused_imports)]
-use crate::global_state::*;
+pub use crate::global_state::*;
 #[allow(unused_imports)]
-use crate::state_channel::*;
+pub use crate::state_channel::*;
 #[allow(unused_imports)]
-use crate::internal_state::*;
+pub use crate::internal_state::*;

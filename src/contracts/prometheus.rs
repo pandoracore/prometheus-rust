@@ -25,8 +25,7 @@ use crate::*;
 /// t_1, t_2, t_3, t_4 \rangle$ (see struct member definitions below and Table 1 of the Prometheus
 /// specification for the meaning of the constants).
 pub struct Prometheus {
-    // I. Off-chain contract part
-
+    // I. Off-chain contract part, $\mathsf{P}_i | \Gamme^\Omega$
     /// Stake required to be deposited by Worker, $w$
     pub worker_stake: Satoshi,
 
@@ -74,4 +73,9 @@ pub struct Prometheus {
     /// Timelock conditions ordered in such a way that smaller-indexed timelock precedes in time
     /// timelocks with larger indexes, $t_1, t_2, t_3, t_4$
     pub timelocks: [u32; 4],
+
+    // I. On-chain-related contract data, $\mathsf{P}_i | \Gamma^\Sigma$
+
+    /// Commitment transaction hash
+    pub commiting_txid: Option<TxID>,
 }

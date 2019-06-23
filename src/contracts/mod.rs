@@ -14,9 +14,9 @@
 // If not, see <https://opensource.org/licenses/MIT>.
 
 pub mod prometheus;
-pub mod computational;
+pub mod computation;
 
 #[allow(unused_imports)]
-use crate::prometheus::*;
+pub use crate::prometheus::*;
 #[allow(unused_imports)]
-use crate::computational::*;
+pub use crate::computation::*;

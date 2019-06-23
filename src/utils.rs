@@ -15,9 +15,16 @@
 
 ///! File defining custom types and generic-use functions
 
+use bitcoin_hashes::sha256d;
+
 /// It would be more convenient for this type to be defined in the bitcoin crate, however we need
 /// to wait until the merged PR <https://github.com/rust-bitcoin/rust-bitcoin/pull/270> will
 /// be released as a part of `bitcoin` crate version 0.19.0. After that we can change this type and
 /// re-define it with the `Amount` type provided by the rust-bitcoin library.
 pub type Satoshi = u64;
 // TODO: Change to Satoshi = bitcoin::util::Amount once bitcoin crate version 0.19.0  will be released
+
+/// It would be more convenient for this type to be defined in the bitcoin crate, however we need
+/// to wait until this issue will be solved: <https://github.com/rust-bitcoin/rust-bitcoin/issues/284>
+pub type TxID = sha256d::Hash;
+// TODO: Remove once <https://github.com/rust-bitcoin/rust-bitcoin/issues/284> is accepted and implemented
